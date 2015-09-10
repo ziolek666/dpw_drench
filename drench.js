@@ -92,6 +92,19 @@ function checkElement(x, y, sourceColor, destColor) {
 	}
 }
 
+function checkWinningConditions(){
+	var win = true;
+	var winningColor = board[0][0];
+	for (var j = 0; j < board.length; j++) {
+	  for (var i = 0; i < board.length; i++) {
+	    if (parseInt([board[j][i]], 10) !== winningColor) {
+				win = false;
+			}
+	  }
+  }
+
+	return win;
+}
 
 function updateElement(x, y, color) {
 	console.log('coords', x, y, 'color', color);
